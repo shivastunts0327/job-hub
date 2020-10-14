@@ -1,0 +1,223 @@
+.aboutUsFrame1 {
+    margin: 20px 50px 50px 100px;
+    color: $ihs-color;
+    display: flex;
+}
+
+.aboutUsFrame1Right {
+    margin: 5px;
+    margin-top: 50px;
+}
+
+.aboutUsFrame1Bg {
+    width: 500px;
+    height: auto;
+}
+
+.aboutus-frame1-heading {
+    color: #888888;
+    margin-top: -15px;
+}
+
+.aboutus-frame1-p {
+    color: #5D5D5D;
+    margin-top: 10px;
+}
+
+.aboutus-frame2-grey-bg {
+    background-color: #faf9f9;
+    border-radius: 0 180px 0 180px;
+    height: 100vh;
+    color: $ihs-color;
+}
+
+.aboutus-frame2-heading {
+    text-align: center;
+    margin: 0px 0 30px 0;
+    padding: 50px;
+}
+
+.aboutus-frame2-bottom {
+    text-align: center;
+}
+
+.aboutUsFrame2Bg {
+    width: 65%;
+}
+
+.aboutus-frame2-p {
+    display: flex;
+    padding: 30px 100px 30px 100px;
+}
+
+.aboutus-frame2-bottom-padding {
+    padding: 0 30px 0 30px;
+    h2 {
+        padding-bottom: 20px;
+    }
+}
+
+.benifits-bg {
+    background: url("/public/images/about/pngbg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 160vh;
+    margin-top: 10px;
+}
+
+.benifits {
+    display: flex;
+}
+
+.recruiterBenifits-img {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+
+.recruiterBenifit-content {
+    color: $white;
+    margin-left: 220px;
+    h2 {
+        margin-top: 220px;
+        margin-bottom: 10px;
+    }
+    p {
+        padding: 0 60px 0 0;
+    }
+}
+.organizationalBenifits {
+    margin-top: -70px;
+}
+.organizationalBenifits-img {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    margin-left: 100px;
+}
+
+.organizationalBenifit-content {
+    color: $white;
+    margin-left: 220px;
+    h2 {
+        margin-top: 170px;
+        margin-bottom: 10px;
+    }
+    p {
+        padding: 0 60px 0 0;
+    }
+}
+
+.jobseekerBenifits {
+    margin-top: -70px;
+}
+
+.jobseekerBenifits-img {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    margin-left: 100px;
+}
+
+.jobseekerBenifit-content {
+    color: $white;
+    margin-left: 220px;
+    h2 {
+        margin-top: 170px;
+        margin-bottom: 10px;
+    }
+    p {
+        padding: 0 60px 0 0;
+    }
+}
+
+.benifitsRightBg {
+    width: 600px;
+}
+
+.benifits-right {
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+.aboutus-candidate {
+    background: $white;
+    display: flex;
+    width: auto;
+    border-radius: 10px;
+    margin-left: 20px;
+    padding: 10px 50px;
+    margin-top: 50px;
+    box-shadow: 0px 1px 1px 1px #d3d1d1;
+}
+.aboutus-candidate:hover {
+    text-decoration: none;
+}
+.aboutUsCandidate {
+    width: 200px;
+    height: 200px;
+    margin-top: -30px;
+}
+
+.aboutusEnding {
+    display: flex;
+    padding: 0 9%;
+    margin-top: -20px;
+}
+
+.aboutusEnding-right {
+    padding: 20px;
+    h2 {
+        color: #aaaaaa;
+    }
+    h1 {
+        color: $ihs-color;
+        margin-top: -5px;
+    }
+    .aboutus-link {
+        color: #aaaaaa;
+        font-size: 20px;
+    }
+    .aboutus-link:hover {
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .aboutUsFrame1Bg {
+        width: 400px;
+    }
+    .benifitsRightBg {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .aboutUsFrame1Bg {
+        display: none;
+    }
+    .recruiterBenifits-img {
+        margin-left: 20px;
+    }
+    .recruiterBenifit-content {
+        margin-left: 140px;
+        padding-right: 10px;
+    }
+    .organizationalBenifits-img {
+        margin-left: 20px;
+    }
+    .organizationalBenifit-content {
+        margin-left: 140px;
+        padding-right: 10px;
+    }
+    .jobseekerBenifits-img {
+        margin-left: 20px;
+    }
+    .jobseekerBenifit-content {
+        margin-left: 140px;
+        padding-right: 10px;
+    }
+}
+

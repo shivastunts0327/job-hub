@@ -1,0 +1,108 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    height: 15vh;
+    width: 100%;
+    align-items: center;
+    border-radius: 0 0 0 100px;
+    background: linear-gradient(#E05034, #F16E35);
+}
+
+
+.whitelogo {
+    margin-left: 50px;
+  }
+  
+.navlink {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin-right: 50px;
+}
+
+.navlinkresume {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin-right: 50px;
+}
+  
+.links {
+    color: $white;
+    font-style: Montserrat;
+}
+.links:hover {
+  text-decoration: none;
+  color: $white;
+}
+  
+.bell1 {
+    color: $white;
+}
+  
+.country {
+    margin-top: -20px;
+    border-radius: 20px;
+    width: 70px;
+    padding: 5px;
+}
+  
+.hamburger-Toggle {
+    cursor: pointer;
+    color: #4d4d4d;
+    display: none;
+    margin-left: 30px;
+}
+  
+@media screen and (max-width: 1000px) {
+    body {
+      overflow-x: hidden;
+    }
+    .ihs-whitelogo {
+      width: 150px;
+      height: 50px;
+      margin-top: -10px;
+    }
+    .hamburger-Toggle {
+      color: $white;
+      display: block;
+      margin-right: 30px;
+    }
+    .links {
+        color: #4d4d4d;
+    }
+    .bell1 {
+        color: #4d4d4d;
+    }
+    .navlink {
+      position: absolute;
+      right: 0px;
+      display: flex;
+      flex-direction: column;
+      height: 85vh;
+      align-items: center;
+      width: 100%;
+      top: 10vh;
+      font-size: $m-size;
+      background-color: #ffffff;
+      transform: translateX(120%);
+      transition: transform 0.5s ease-in;
+    }
+    .navlinkresume {
+      position: absolute;
+      right: 0px;
+      display: flex;
+      flex-direction: column;
+      height: 85vh;
+      align-items: center;
+      width: 100%;
+      top: 10vh;
+      font-size: $m-size;
+      background-color: #ffffff;
+      transform: translateX(120%);
+      transition: transform 0.5s ease-in;
+    }
+    .active {
+      transform: translateX(0%);
+    }
+}

@@ -1,0 +1,99 @@
+.contact-us-input {
+    margin-bottom: 10px;
+    color: $ihs-color;
+    padding: 20px 40px 20px 20px;
+    background: $white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px #d3d1d1;
+}
+
+.contact-us-flex {
+    display: flex;
+    margin-left: 30%;
+}
+
+.contact-us-textarea {
+    background-color: $white;
+    margin-left: -15px;
+    padding: 10px;
+    width: 490px;
+    height: 150px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 1px #d3d1d1;
+}
+
+.contact-us-submit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #F06D35;
+    color: $white;
+}
+
+.contact-us-request-call {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #4B4B4B;
+    color: $white;
+    margin-left: 5px;
+    .fas {
+        padding-left: 10px;
+    }
+}
+
+.contact-us-touch {
+    text-align: center;
+    color: $ihs-color;
+}
+
+.contact-us-form {
+    text-align: center;
+}
+
+.contact-us-buttons {
+    display: flex;
+    margin-left: 40%;
+    margin-top: 10px;
+}
+
+.contact-us-details-flex {
+    display: flex;
+    margin: 50px 150px;
+}
+
+.contact-us-details {
+    text-align: center;
+    padding: 10px;
+    margin-right: 20px;
+    border: 1.5px solid #f3f0f0;
+    img {
+        width: 60px;
+        height: 60px;
+    }
+    .contact-us-message {
+        color: $ihs-color;
+    }
+    .contact-message {
+        margin-top: 40px;
+    }
+}
+
+.contact-us-details-location {
+    text-align: center;
+    padding: 10px;
+    margin-right: 20px;
+    margin-left: 70px;
+    border: 1.5px solid #f3f0f0;
+    border-radius: 5px;
+    .contact-us-location {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    p {
+        padding: 5px 30px;
+    }
+}

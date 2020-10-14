@@ -1,0 +1,151 @@
+.jobseeker-subheader {
+    padding: 15px;
+    margin-left: 82%;
+    .fab {
+        padding: 0 10px;
+    }
+    .fa-linkedin {
+        color: $linkedin;
+    }
+    .fa-twitter {
+        color: $twitter;
+    }
+    .fa-facebook {
+        color: $facebook;
+    }
+    .fa-instagram {
+        color: $instagram;
+    }
+    .fa-youtube {
+        color: red;
+    }
+}
+
+
+.jobseeker {
+    display: flex;
+    margin: 20px 200px 100px 200px;
+}
+
+.jobseeker-left {
+    width: 38%;
+}
+
+.jobseeker-img {
+    width: 400px;
+    height: 535px;
+}
+
+.jobseeker-details {
+    display: flex;
+}
+
+.jobseeker-registration {
+    margin-top: 0px;
+}
+
+.job-signin {
+    margin: 10px 0 0px 65%;
+}
+
+.file {
+    color: transparent;
+}
+.file::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.file::before {
+    content: 'Upload Resume';
+    color: $ihs-color;
+    display: inline-block;
+    background: #f3f0f0;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+ 
+}
+
+.file:active {
+    outline: 0;
+}
+.file:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+  
+.errorMessage {
+    color: red;
+}
+
+.login-tag {
+    color: $text;
+    margin-top: -5px;
+    font-size: 20px;
+}
+.login-tag:hover {
+    text-decoration: none;
+    color: $text;
+}
+
+button:disabled,
+button[disabled]{
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.red-asterisk {
+    color: red;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .jobseeker {
+        margin: 20px 150px 100px 50px;
+    }
+    
+}
+
+@media screen and (max-width: 1024px) {
+    .jobseeker-subheader {
+        margin-left: 73%;
+    }
+    .jobseeker {
+        margin: 20px 150px 100px 50px;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    .jobseeker-subheader {
+        margin-left: 70%;
+    }
+    // .jobseeker {
+    //     margin: 20px 100px 100px 50px;
+    // }
+    // .jobseeker-img {
+    //     display: none;
+    // }
+    
+}
+
+@media screen and (max-width: 700px) {
+    .jobseeker-subheader {
+        margin-left: 60%;
+    }
+    // .jobseeker {
+    //     margin: 20px 50px 100px 50px;
+    // }
+}
+
+@media screen and (max-width: 600px) {
+    .jobseeker-subheader {
+        margin-left: 50%;
+    }
+//     .jobseeker {
+//         margin: 20px 0px 100px 0px;
+//     }
+}

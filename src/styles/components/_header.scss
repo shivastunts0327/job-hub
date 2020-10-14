@@ -1,0 +1,102 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 15vh;
+  width: 100%;
+  align-items: center;
+  position: absolute;
+}
+
+.logo {
+  margin-left: 50px;
+  display: flex;
+}
+.beta-tag {
+  margin-top: 15px;
+  margin-left: 20px;
+  font-size: 25px;
+}
+
+.navlinks {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin-right: 50px;
+}
+
+.link {
+  color: $ihs-color;
+  font-style: Montserrat;
+}
+
+.link:hover {
+  color: #444343;
+  text-decoration: none;
+}
+
+.bell {
+  color: $ihs-color;
+}
+
+.country {
+  margin-top: -20px;
+  border-radius: 20px;
+  width: 70px;
+  padding: 5px;
+}
+
+.hamburger-toggle {
+  cursor: pointer;
+  color: $ihs-color;
+  display: none;
+  margin-left: 30px;
+}
+
+.login-button {
+  border: none;
+  background: $white;
+  color: $ihs-color;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
+  .ihs-logo {
+    width: 150px;
+    height: 50px;
+    margin-top: -10px;
+  }
+  .beta-tag {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+  .hamburger-toggle {
+    display: block;
+    margin-right: 30px;
+  }
+
+  .navlinks {
+    position: absolute;
+    right: -50px;
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    align-items: center;
+    width: 100%;
+    top: 10vh;
+    font-size: $m-size;
+    background-color: $white;
+    transform: translateX(120%);
+    transition: transform 0.5s ease-in;
+  }
+  .active {
+    transform: translateX(0%);
+  }
+}
+
+.india {
+  margin-top: -2px;
+  width: 20px;
+  height: 20px;
+}

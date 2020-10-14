@@ -1,0 +1,119 @@
+.addresume-container {
+    display: flex;
+}
+
+.stepper-background {
+    padding: 50px 60px 30px 100px;
+}
+
+.stepper {
+    // background: $ihs;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.resume-container-border {
+    margin: 70px 0;
+    border-radius: 10px;
+    padding: 30px;
+    border: 2px solid rgb(243, 242, 242);
+}
+
+.heading {
+    margin: 10px 0 30px 0px;
+}
+
+.heading-label {
+    color: $ihs-color;
+}
+
+textarea {
+    width: 600px;
+    height: 150px;
+    background-color: rgb(250, 249, 249);
+    border: none;
+    border-radius: 10px;
+    box-shadow: -1px 1px 1px 1px #d3d1d1;
+}
+
+.next {
+    margin-left: 520px;
+    padding: 5px 20px;
+    margin-top: 50px;
+    background: #F16E35;
+    border: none;
+    color: $white;
+    border-radius: 5px;
+    .fas {
+        padding-left: 10px;
+    }
+}
+
+.back {
+    padding: 5px 20px;
+    background: #F16E35;
+    border: none;
+    color: $white;
+    border-radius: 5px;
+    .fas {
+        padding-right: 10px;
+    }
+}
+
+.preview {
+    margin-left: 400px;
+    padding: 5px 20px;
+    margin-top: 50px;
+    background: #F16E35;
+    border: none;
+    color: $white;
+    border-radius: 5px;
+}
+
+.submit {
+    margin-left: 10px;
+    padding: 5px 20px;
+    margin-top: 50px;
+    background: #F16E35;
+    border: none;
+    color: $white;
+    border-radius: 5px;
+}
+
+.resume-input {
+    border: none;
+    padding: 20px;
+    box-shadow: -1px 1px 1px 1px #d3d1d1;
+    border-radius: 5px;
+    margin: 5px 5px;
+}
+
+.roles-repso {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.roles-width {
+    width: 720px;
+    padding: 10px;
+}
+
+.add-experience {
+    margin-top: 20px;
+    padding: 5px 20px;
+    background: rgb(248, 200, 208);
+    border: none;
+    color: rgba(165, 42, 42, 0.692);
+    border-radius: 5px;
+    .fas {
+        padding-right: 10px;
+    }
+}
+
+.social-select {
+    border: none;
+    padding: 20px;
+    box-shadow: -1px 1px 1px 1px #d3d1d1;
+    border-radius: 5px;
+    color: $ihs-color;
+}
