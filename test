@@ -1,7 +1,9 @@
 node{
     
     stage('permissions for Directories'){
-    sh label: '', script: '''git credentialsId: 'last', url: 'git@github.com:shivastunts0327/job-hub.git'
+    sh label: '', script: '''
+    cd /opt
+    git clone git@github.com:shivastunts0327/job-hub.git
     sudp apt-get update'''
  }
 }
