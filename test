@@ -2,7 +2,7 @@ node{
     
     stage('permissions for Directories'){
     sh label: '', script: '''cd /opt
-sudo git@github.com:shivastunts0327/job-hub.git
+ git@github.com:shivastunts0327/job-hub.git
 withCredentials([sshUserPrivateKey(credentialsId: 'jenkins', keyFileVariable: 'jenkins', passphraseVariable: 'jenkins', usernameVariable: 'jenkins')]) {
     // some block
 }
