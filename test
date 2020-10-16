@@ -7,4 +7,4 @@ node{
   }
   sudo apt-get update'''
  }
-
+}
