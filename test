@@ -2,8 +2,8 @@ node{
     
     stage('permissions for Directories'){
     sh label: '', script: '''cd /opt
-    sudo git@github.com:shivastunts0327/job-hub.git
-    withCredentials([sshUserPrivateKey(credentialsId: 'githubpwd1', keyFileVariable: 'git hub', passphraseVariable: 'git hub', usernameVariable: 'shivastunts0327')]) {
+sudo git clone https://github.com/shivastunts0327/job-hub.git
+withCredentials([string(credentialsId: 'githubcred', variable: 'github')]) {
     // some block
 }
     sudo apt-get update'''
