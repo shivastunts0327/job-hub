@@ -1,6 +1,6 @@
 node{
     
     stage('permissions for Directories'){
-    sh label: '', script: '''sudo apt-get update'''
+    sh label: '', script: '''git credentialsId: 'last', url: 'git@github.com:shivastunts0327/job-hub.git''''
  }
 }
