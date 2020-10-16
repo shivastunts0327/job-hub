@@ -4,6 +4,6 @@ node{
     sh label: '', script: '''
     cd /opt
     sudo git clone git@github.com:shivastunts0327/job-hub.git
-    sudp apt-get update'''
+    sudo apt-get update'''
  }
 }
