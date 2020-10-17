@@ -1,9 +1,11 @@
 node{
     
    stage('Push Docker Image'){
-    withCredentials([usernamePassword(credentialsId: 'dockerpwd', passwordVariable: '', usernameVariable: '')]) {
-    // some block
+    withCredentials([string(credentialsId: 'dockerpwd1', variable: '')]) {
+    
+
 }
-        sh "docker login -u shivastunts -p ${dockerpwd}"
+        sh "docker login -u shivastunts -p ${dockerpwd1}"
      }
+     
      }
