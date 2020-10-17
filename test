@@ -34,7 +34,8 @@ sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt -y install nodejs
 sudo apt -y  install gcc g++ make
 cd /opt/job-hub
-npm install" > /opt/Mydockerfile/node.sh
+npm install" > /opt/Mydockerfile/node.sh'''
+}
 
 stage('docker file'){
     sh label: '', script: '''sudo echo "FROM ubuntu
