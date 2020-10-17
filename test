@@ -10,7 +10,7 @@ node{
     stage('permissions for Directories'){
     sh label: '', script: '''sudo sudo mkdir /opt/Mydockerfile
     sudo chmod 777 /opt/Mydockerfile
-    sudo cp /opt/job-hub /opt/Mydockerfile'''
+    sudo cp -r /opt/job-hub /opt/Mydockerfile'''
     }
 
 stage('docker installation'){
