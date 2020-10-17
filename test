@@ -6,4 +6,4 @@ node{
 }
         sh "docker login -u shivastunts -p ${dockerpwd}"
      }
-     
+     }
