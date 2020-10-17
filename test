@@ -3,14 +3,14 @@ node{
     stage('cloning the private git hub code'){
     sh label: '', script: '''sudo chmod 777 /opt
     cd /opt
-    sudo git clone git@github.com:shivastunts0327/job-hub.git
+    # sudo git clone git@github.com:shivastunts0327/job-hub.git
     sudo chmod 777 /opt/job-hub'''
     }
 
     stage('permissions for Directories'){
-    sh label: '', script: '''sudo sudo mkdir /opt/Mydockerfile
+    sh label: '', script: '''# sudo sudo mkdir /opt/Mydockerfile
     sudo chmod 777 /opt/Mydockerfile
-    sudo cp -r /opt/job-hub /opt/Mydockerfile'''
+    # sudo cp -r /opt/job-hub /opt/Mydockerfile'''
     }
 
 stage('docker installation'){
@@ -42,12 +42,12 @@ ENTRYPOINT ["npm", "run", "dev-server"]'''
 }
 stage('docker file moving to response directory'){
     sh label: '', script: '''
-    sudo mv /opt/Dockerfile /opt/Mydockerfile'''
+    # sudo mv /opt/Dockerfile /opt/Mydockerfile'''
     }
 
 stage('docker build'){
     sh label: '', script: '''cd /opt/Mydockerfile
-    sudo docker build -t ihscarriers .
+    # sudo docker build -t ihscarriers .
     sudo apt-get update -y'''
     }
     
@@ -56,8 +56,8 @@ stage('docker build'){
       }
        
        stage('docker image pushing to hub'){
-    sh label: '', script: '''sudo docker tag ihscarriers shivastunts/ihscarriers
-    sudo docker push shivastunts/ihscarriers'''
+    sh label: '', script: '''# sudo docker tag ihscarriers shivastunts/ihscarriers
+    # sudo docker push shivastunts/ihscarriers'''
     }
  
     stage('code'){
@@ -67,10 +67,11 @@ stage('docker build'){
     }
        
 stage('ansible installing'){
-   sh label: '', script: '''echo Installing software-properties-common packages, then add the java OpenJDK PPA repository.
+   sh label: '', script: '''echo this script done by shiva
+   echo Installing software-properties-common packages, then add the java OpenJDK PPA repository.
    sudo apt install software-properties-common apt-transport-https -y
    sudo add-apt-repository ppa:openjdk-r/ppa -y
-   echo Now installing the Java 8 using apt command.
+   Now installing the Java 8 using apt command.
    sudo apt install openjdk-8-jdk -y
    echo java version installed on the system.
    java -version
@@ -78,7 +79,7 @@ stage('ansible installing'){
    sudo apt-get update -y
    sudo apt-get upgrade -y
    echo Ansible PPA to your server
-   sudo apt-add-repository ppa:ansible/ansible ' '
+   sudo apt-add-repository ppa:ansible/ansible \' \'
    echo update the repository and install Ansible
    sudo apt-get update -y
    sudo apt-get install ansible -y
