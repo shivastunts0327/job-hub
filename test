@@ -55,15 +55,16 @@ stage('docker build'){
     sh label: '', script: '''cat /tmp/passwd | docker login --username shivastunts --password-stdin'''
       }
        
-       stage('docker image pushing to hub '){
+       stage('docker image pushing to hub'){
     sh label: '', script: '''sudo docker tag ihscarriers shivastunts/ihscarriers
     sudo docker push shivastunts/ihscarriers'''
     }
  
-stage('code'){
-    sh label: '', script: '''sudo echo "cd /opt/projectihscarriers/job-hub
-    npm install'' > /opt/code.sh'''
-}
+    stage('code'){
+    sh label: '', script: '''cat >/opt/code.sh <<'EOF'
+    cd /opt/projectihscarriers/job-hub
+    npm install'''
+    }
        
 stage('ansible installing'){
    sh label: '', script: '''echo Installing software-properties-common packages, then add the java OpenJDK PPA repository.
