@@ -45,17 +45,23 @@ stage('docker file moving to response directory'){
     sudo mv /opt/Dockerfile /opt/Mydockerfile'''
     }
 
-stage('docker image  hub push'){
+stage('docker build'){
     sh label: '', script: '''cd /opt/Mydockerfile
     sudo docker build -t ihscarriers .
-    withCredentials([string(credentialsId: 'docker-pwd', variable: 'dockerHubPwd')]) {
-      sudo docker login -u shivastunts -p ${dockerHubPwd}
-        sudo docker tag ihscarriers shivastunts/ihscarriers
-    sudo docker push shivastunts/ihscarriers'''
+    sudo apt-get update -y'''
     }
     
-   
-
+    stage('docker hub login'){
+    sh label: '', script: '''withCredentials([string(credentialsId: 'docker-pwd', variable: 'dockerHubPwd')]) {
+      sudo docker login -u shivastunts -p ${dockerHubPwd}
+      sudo apt-get update -y'''
+      }
+       
+       stage('docker image pushing to hub '){
+    sh label: '', script: '''sudo docker tag ihscarriers shivastunts/ihscarriers
+    sudo docker push shivastunts/ihscarriers'''
+    }
+ 
 stage('code'){
     sh label: '', script: '''sudo echo "cd /opt/projectihscarriers/job-hub
     npm install'' > /opt/code.sh'''
