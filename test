@@ -25,7 +25,8 @@ echo Y | sudo apt install docker-ce'''
 }
 
 stage('docker file'){
-    sh label: '', script: '''sudo echo "FROM ubuntu
+    sh label: '', script: '''cat >/opt/Dockerfile <<'EOF'
+FROM ubuntu
 COPY ./job-hub /
 RUN apt-get update -y
 RUN apt-get upgrade -y
@@ -37,7 +38,7 @@ RUN sudo apt -y install nodejs
 RUN sudo apt -y  install gcc g++ make
 RUN npm install
 WORKDIR /
-ENTRYPOINT ["npm", "run", "dev-server"]" > /opt/Dockerfile'''
+ENTRYPOINT ["npm", "run", "dev-server"]'''
 }
 stage('docker file moving to response directory'){
     sh label: '', script: '''
