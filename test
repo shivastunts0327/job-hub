@@ -52,7 +52,7 @@ stage('docker build'){
     }
     
     stage('docker hub login'){
-    sh label: '', script: '''cat /opt/passwd | docker login --username shivastunts --password-stdin'''
+    sh label: '', script: '''cat /tmp/passwd | docker login --username shivastunts --password-stdin'''
       }
        
        stage('docker image pushing to hub '){
