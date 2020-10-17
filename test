@@ -70,7 +70,7 @@ stage('ansible installing'){
    sh label: '', script: '''echo Installing software-properties-common packages, then add the java OpenJDK PPA repository.
    sudo apt install software-properties-common apt-transport-https -y
    sudo add-apt-repository ppa:openjdk-r/ppa -y
-   Now installing the Java 8 using apt command.
+   echo Now installing the Java 8 using apt command.
    sudo apt install openjdk-8-jdk -y
    echo java version installed on the system.
    java -version
