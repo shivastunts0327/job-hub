@@ -52,9 +52,7 @@ stage('docker build'){
     }
     
     stage('docker hub login'){
-    sh label: '', script: '''withCredentials([string(credentialsId: 'docker-pwd', variable: 'dockerHubPwd')]) {
-      sudo docker login -u shivastunts -p ${dockerHubPwd}
-      sudo apt-get update -y'''
+    sh label: '', script: '''cat /opt/passwd | docker login --username shivastunts --password-stdin'''
       }
        
        stage('docker image pushing to hub '){
