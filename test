@@ -48,7 +48,7 @@ stage('docker file moving to response directory'){
 stage('docker build'){
     sh label: '', script: '''cd /opt/Mydockerfile
     sudo docker build -t ihscarriers .
-    sudo apt-get update -y'''
+    sudo chmod 666 /var/run/docker.sock'''
     }
     
     stage('docker hub login'){
