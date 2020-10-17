@@ -36,10 +36,13 @@ RUN sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 RUN sudo apt -y install nodejs
 RUN sudo apt -y  install gcc g++ make
 RUN npm install
-RUN npm install
-ENTRYPOINT ["npm", "run", "dev-server"]" > /opt/Dockerfile
-sudo mv /opt/Dockerfile /opt/Mydockerfile'''
+WORKDIR /
+ENTRYPOINT ["npm", "run", "dev-server"]" > /opt/Dockerfile'''
 }
+stage('docker file moving to response directory'){
+    sh label: '', script: '''
+    sudo mv /opt/Dockerfile /opt/Mydockerfile'''
+    }
 
 stage('docker image  hub push'){
     sh label: '', script: '''cd /opt/Mydockerfile
