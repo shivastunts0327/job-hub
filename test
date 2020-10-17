@@ -223,15 +223,10 @@ sh label: '', script: '''cat >/opt/ihscarriers.yaml <<\'EOF\'
      }
 
      stage('Removing Docker installation'){ 
-sh label: '', script: '''sudo docker stop $(docker ps -a -q)
-sudo docker rm -f $(docker ps -a -q)
-sudo docker rmi -f $(docker images -a -q)
+sh label: '', script: '''sudo docker rmi -f ihscarriers ubuntu
 sudo apt purge -y docker-engine docker docker.io docker-ce docker-ce-cli
-sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce  
-sudo rm -rf /var/lib/docker /etc/docker
-sudo rm /etc/apparmor.d/docker
-sudo groupdel docker
-sudo rm -rf /var/run/docker.sock'''
+sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce
+sudo rm -rf /var/lib/docker /etc/docker'''
 }
 
 stage('Removing ansible installation'){ 
