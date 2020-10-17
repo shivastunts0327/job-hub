@@ -1,7 +1,8 @@
 node{
     
-    stage('permissions for Directories'){
-    sh label: '', script: ''' docker.withRegistry('https://registry.hub.docker.com', 'dockerpwd') {
-    sudo apt-get update'''
+    stage('Push Docker Image'){
+     withCredentials([usernamePassword(credentialsId: 'dockerpwd', passwordVariable: '', usernameVariable: '')]) {
+        sh "docker login -u kammana -p ${dockerHubPwd}"
+     }
  }
 }
