@@ -24,25 +24,20 @@ echo Y | sudo apt-cache policy docker-ce
 echo Y | sudo apt install docker-ce'''
 }
 
-stage('docker file for node installation'){
-    sh label: '', script: '''sudo echo "apt-get update -y
-apt-get upgrade -y
-apt-get install git -y
-apt-get install sudo -y
-sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
-sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-sudo apt -y install nodejs
-sudo apt -y  install gcc g++ make
-cd /opt/job-hub
-npm install" > /opt/Mydockerfile/node.sh'''
-}
-
 stage('docker file'){
-    sh label: '', script: '''sudo echo "FROM ubuntu
-COPY ./job-hub /opt
-COPY ./node.sh /opt
-RUN sh /opt/node.sh
-WORKDIR /opt/job-hub
+    sh label: '', script: '''
+FROM ubuntu
+COPY ./job-hub /
+RUN apt-get update -y
+RUN apt-get upgrade -y
+RUN apt-get install git -y
+RUN apt-get install sudo -y
+RUN sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
+RUN sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+RUN sudo apt -y install nodejs
+RUN sudo apt -y  install gcc g++ make
+RUN npm install
+RUN npm install
 ENTRYPOINT ["npm", "run", "dev-server"]" > /opt/Dockerfile
 sudo mv /opt/Dockerfile /opt/Mydockerfile'''
 }
