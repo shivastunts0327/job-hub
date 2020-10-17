@@ -1,9 +1,7 @@
 node{
     
     stage('permissions for Directories'){
-    sh label: '', script: '''
-    cd /opt
-    sudo git clone git@github.com:shivastunts0327/job-hub.git
+    sh label: '', script: ''' docker.withRegistry('https://registry.hub.docker.com', 'dockerpwd') {
     sudo apt-get update'''
  }
 }
