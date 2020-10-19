@@ -229,25 +229,6 @@ sh label: '', script: '''cat >/opt/ihscarriers.yaml <<\'EOF\'
      sh label: '', script: '''sudo ansible-playbook /opt/ihscarriers.yaml'''
      }
 
-     stage('Removing Docker installation'){ 
-sh label: '', script: '''sudo docker rmi -f ihscarriers ubuntu
-sudo apt purge -y docker-engine docker docker.io docker-ce docker-ce-cli
-sudo apt-get autoremove -y --purge docker-engine docker docker.io docker-ce
-sudo rm -rf /var/lib/docker /etc/docker'''
-}
-
-stage('Removing ansible installation'){ 
-sh label: '', script: '''echo Y | sudo apt-get remove ansible
-echo Y | sudo apt-get autoremove ansible
-echo Y | sudo apt-get purge ansible
-echo Y | sudo apt-get autoremove --purge ansible'''
-}
-
-stage('Removing all relevant files'){ 
-sh label: '', script: '''sudo rm -Rf /opt/ *'''
-}
-
-
 stage('conculsion'){ 
 sh label: '', script: '''sudo echo congrulations You Have deployed The IHS-CARRIERS WEB APPLICATION..'''
 }
